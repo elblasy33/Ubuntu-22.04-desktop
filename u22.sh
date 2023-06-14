@@ -118,5 +118,3 @@ sub-install-nomachine
 sub-configue-nomachine-user
 
 run-cmd "sudo reboot"
-             
-

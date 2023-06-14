@@ -26,28 +26,11 @@ EOF
 
 
 
-sub-configue-nomachine-user ()
-{
- echo ""
- echo ""
- echo "================================================================="
- echo " Set up nomachine user "
- echo "-----------------------------------------------------------------"
- read -p "Proceed ? (Y/n)" choice
- if [ "$choice" = "n" ]
-    then 
-        echo "Bypassing...." 
-    elif [ "$choice" = "N" ]
-	then
-       echo "Bypassing...." 
-    else 
-    echo "Running..."
+
     sudo adduser elblasyapp
          #(example password : paste  se7ye8pc5hs0  )
     sudo usermod -aG sudo,adm,lp,sys,lpadmin elblasyapp
-   
-fi
-}
+
 # MAIN ROUTINE FOLLOWS #
 # ---------------------#
 sudo apt-get update 

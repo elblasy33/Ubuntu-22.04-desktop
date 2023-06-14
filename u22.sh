@@ -12,62 +12,17 @@ cat << "EOF"
                             |___/           |_|   |_|  
 EOF
     sleep 6s
-function run-cmd ()
-{
 
-
-function sub-build-swapfile ()
-{
- echo ""
- echo ""
- echo "================================================================="
- echo " About to build 2GB swapfile called /swapfile"
- echo "-----------------------------------------------------------------"
- read -p "Proceed ? (Y/n)" choice
- if [ "$choice" = "n" ]
-    then 
-        echo "Bypassing...." 
-    elif [ "$choice" = "N" ]
-	then
-       echo "Bypassing...." 
-    else 
-    echo "Running..."
-	if [ -f /swapfile ]; then
-        echo "/swapfile already exists. Bypassing..."
-    else 
-        echo "/swapfile does not exist. Bulding /swapfile.."
-        cd /
 	    sudo dd if=/dev/zero of=/swapfile bs=1M count=2048 status=progress
 	    sudo chmod 600 /swapfile
 	    sudo mkswap /swapfile
 	    sudo swapon /swapfile
 	    echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab
-fi
-fi
-}
 
-####################################################
 
-sub-install-nomachine ()
-{
- echo ""
- echo ""
- echo "================================================================="
- echo " Install NoMachine v8.4.1 amd64  "
- echo "-----------------------------------------------------------------"
- read -p "Proceed ? (Y/n)" choice
- if [ "$choice" = "n" ]
-    then 
-        echo "Bypassing...." 
-    elif [ "$choice" = "N" ]
-	then
-       echo "Bypassing...." 
-    else 
-       echo "Running..."
+
        sudo wget https://download.nomachine.com/download/8.4/Linux/nomachine_8.4.2_1_amd64.deb
        sudo apt install -f ./nomachine_8.4.2_1_amd64.deb
-fi
-}
 
 
 

@@ -51,7 +51,7 @@ fi
 # MAIN ROUTINE FOLLOWS #
 # ---------------------#
 sudo apt-get update 
-run-cmd sudo apt-get upgrade -y
+sudo apt-get upgrade -y
 sudo apt-get install ubuntu-desktop -y
 sudo apt-get install stacer -y
 sudo apt-get install mmv -y

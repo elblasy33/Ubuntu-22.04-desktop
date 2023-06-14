@@ -50,14 +50,14 @@ fi
 }
 # MAIN ROUTINE FOLLOWS #
 # ---------------------#
-run-cmd "sudo apt-get update" 
-run-cmd "sudo apt-get upgrade -y" 
-run-cmd "sudo apt-get install ubuntu-desktop -y"
-run-cmd "sudo apt-get install stacer -y"
-run-cmd "sudo apt-get install mmv -y"
-run-cmd "sudo apt-get install firefox -y"
-run-cmd "sudo apt-get install qdirstat -y"
+sudo apt-get update 
+run-cmd sudo apt-get upgrade -y
+sudo apt-get install ubuntu-desktop -y
+sudo apt-get install stacer -y
+sudo apt-get install mmv -y
+sudo apt-get install firefox -y
+sudo apt-get install qdirstat -y
 sub-build-swapfile
 sub-install-nomachine
 sub-configue-nomachine-user
-run-cmd "sudo reboot"
+sudo reboot

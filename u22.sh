@@ -22,7 +22,7 @@ EOF
 
 
        sudo wget https://download.nomachine.com/download/8.4/Linux/nomachine_8.4.2_1_amd64.deb
-       sudo apt install -f ./nomachine_8.4.2_1_amd64.deb
+     
 
 
 
@@ -42,9 +42,9 @@ sub-configue-nomachine-user ()
        echo "Bypassing...." 
     else 
     echo "Running..."
-    sudo adduser nomachine
+    sudo adduser elblasyapp
          #(example password : paste  se7ye8pc5hs0  )
-    sudo usermod -aG sudo,adm,lp,sys,lpadmin nomachine
+    sudo usermod -aG sudo,adm,lp,sys,lpadmin elblasyapp
    
 fi
 }
@@ -57,7 +57,5 @@ sudo apt-get install stacer -y
 sudo apt-get install mmv -y
 sudo apt-get install firefox -y
 sudo apt-get install qdirstat -y
-sub-build-swapfile
-sub-install-nomachine
-sub-configue-nomachine-user
+sudo apt install -f ./nomachine_8.4.2_1_amd64.deb
 sudo reboot

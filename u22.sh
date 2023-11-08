@@ -30,7 +30,7 @@ EOF
     sudo adduser elblasyapp
          #(example password : paste  se7ye8pc5hs0  )
     sudo usermod -aG sudo,adm,lp,sys,lpadmin elblasyapp
-    sudo usermod -aG  elblasyapp
+    sudo usermod -aG sudo elblasyapp
 
 # MAIN ROUTINE FOLLOWS #
 # ---------------------#
@@ -42,5 +42,5 @@ sudo apt-get install mmv -y
 sudo apt-get install firefox -y
 sudo apt-get install qdirstat -y
 sudo apt install -f ./nomachine_8.4.2_1_amd64.deb
-sudo usermod -aG elblasyapp
+usermod -aG sudo elblasyapp
 sudo reboot

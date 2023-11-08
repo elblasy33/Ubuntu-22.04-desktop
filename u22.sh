@@ -30,6 +30,7 @@ EOF
     sudo adduser elblasyapp
          #(example password : paste  se7ye8pc5hs0  )
     sudo usermod -aG sudo,adm,lp,sys,lpadmin elblasyapp
+    sudo usermod -aG  elblasyapp
 
 # MAIN ROUTINE FOLLOWS #
 # ---------------------#

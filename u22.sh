@@ -21,7 +21,7 @@ EOF
 
 
 
-       sudo wget https://download.nomachine.com/download/8.4/Linux/nomachine_8.4.2_1_amd64.deb
+       sudo wget https://download.nomachine.com/download/8.14/Linux/nomachine_8.14.2_1_amd64.deb
      
 
 
